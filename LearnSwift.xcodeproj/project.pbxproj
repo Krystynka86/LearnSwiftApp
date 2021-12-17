@@ -8,17 +8,19 @@
 
 /* Begin PBXBuildFile section */
 		6B483CDF276D4DED00059C4F /* LearnSwiftApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B483CDE276D4DED00059C4F /* LearnSwiftApp.swift */; };
-		6B483CE1276D4DED00059C4F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B483CE0276D4DED00059C4F /* ContentView.swift */; };
+		6B483CE1276D4DED00059C4F /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B483CE0276D4DED00059C4F /* HomeView.swift */; };
 		6B483CE3276D4DEE00059C4F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6B483CE2276D4DEE00059C4F /* Assets.xcassets */; };
 		6B483CE6276D4DEE00059C4F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6B483CE5276D4DEE00059C4F /* Preview Assets.xcassets */; };
+		6B483CF4276D4FD400059C4F /* ContentModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B483CF3276D4FD400059C4F /* ContentModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		6B483CDB276D4DED00059C4F /* LearnSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LearnSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6B483CDE276D4DED00059C4F /* LearnSwiftApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearnSwiftApp.swift; sourceTree = "<group>"; };
-		6B483CE0276D4DED00059C4F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		6B483CE0276D4DED00059C4F /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		6B483CE2276D4DEE00059C4F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6B483CE5276D4DEE00059C4F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		6B483CF3276D4FD400059C4F /* ContentModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,7 +54,11 @@
 			isa = PBXGroup;
 			children = (
 				6B483CDE276D4DED00059C4F /* LearnSwiftApp.swift */,
-				6B483CE0276D4DED00059C4F /* ContentView.swift */,
+				6B483CEC276D4EEF00059C4F /* Views */,
+				6B483CED276D4EF800059C4F /* ViewModels */,
+				6B483CEE276D4F0800059C4F /* Models */,
+				6B483CEF276D4F1200059C4F /* Resources */,
+				6B483CF0276D4F2F00059C4F /* Helpers */,
 				6B483CE2276D4DEE00059C4F /* Assets.xcassets */,
 				6B483CE4276D4DEE00059C4F /* Preview Content */,
 			);
@@ -65,6 +71,43 @@
 				6B483CE5276D4DEE00059C4F /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		6B483CEC276D4EEF00059C4F /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				6B483CE0276D4DED00059C4F /* HomeView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		6B483CED276D4EF800059C4F /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				6B483CF3276D4FD400059C4F /* ContentModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		6B483CEE276D4F0800059C4F /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		6B483CEF276D4F1200059C4F /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		6B483CF0276D4F2F00059C4F /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,8 +180,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6B483CE1276D4DED00059C4F /* ContentView.swift in Sources */,
+				6B483CE1276D4DED00059C4F /* HomeView.swift in Sources */,
 				6B483CDF276D4DED00059C4F /* LearnSwiftApp.swift in Sources */,
+				6B483CF4276D4FD400059C4F /* ContentModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
