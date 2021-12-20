@@ -12,9 +12,13 @@
 		6B483CE3276D4DEE00059C4F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6B483CE2276D4DEE00059C4F /* Assets.xcassets */; };
 		6B483CE6276D4DEE00059C4F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6B483CE5276D4DEE00059C4F /* Preview Assets.xcassets */; };
 		6B483CF4276D4FD400059C4F /* ContentModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B483CF3276D4FD400059C4F /* ContentModel.swift */; };
+		6B560E3D2770FF4900AABEB6 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B560E3C2770FF4900AABEB6 /* ContentView.swift */; };
+		6B560E3F27710F5A00AABEB6 /* ContentViewRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B560E3E27710F5A00AABEB6 /* ContentViewRow.swift */; };
+		6B560E412771120900AABEB6 /* ContentDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B560E402771120900AABEB6 /* ContentDetailView.swift */; };
 		6BA4811F276F5AF9008C968C /* data.json in Resources */ = {isa = PBXBuildFile; fileRef = 6BA4811E276F5AF9008C968C /* data.json */; };
 		6BA48121276F5B02008C968C /* style.html in Resources */ = {isa = PBXBuildFile; fileRef = 6BA48120276F5B02008C968C /* style.html */; };
 		6BA48123276F5D91008C968C /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BA48122276F5D91008C968C /* Models.swift */; };
+		6BA48125276F7A56008C968C /* HomeViewRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BA48124276F7A56008C968C /* HomeViewRow.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,9 +28,13 @@
 		6B483CE2276D4DEE00059C4F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6B483CE5276D4DEE00059C4F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		6B483CF3276D4FD400059C4F /* ContentModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentModel.swift; sourceTree = "<group>"; };
+		6B560E3C2770FF4900AABEB6 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		6B560E3E27710F5A00AABEB6 /* ContentViewRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewRow.swift; sourceTree = "<group>"; };
+		6B560E402771120900AABEB6 /* ContentDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentDetailView.swift; sourceTree = "<group>"; };
 		6BA4811E276F5AF9008C968C /* data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = data.json; sourceTree = "<group>"; };
 		6BA48120276F5B02008C968C /* style.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = style.html; sourceTree = "<group>"; };
 		6BA48122276F5D91008C968C /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
+		6BA48124276F7A56008C968C /* HomeViewRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewRow.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +91,10 @@
 			isa = PBXGroup;
 			children = (
 				6B483CE0276D4DED00059C4F /* HomeView.swift */,
+				6BA48124276F7A56008C968C /* HomeViewRow.swift */,
+				6B560E3C2770FF4900AABEB6 /* ContentView.swift */,
+				6B560E3E27710F5A00AABEB6 /* ContentViewRow.swift */,
+				6B560E402771120900AABEB6 /* ContentDetailView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -192,7 +204,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				6B483CE1276D4DED00059C4F /* HomeView.swift in Sources */,
+				6BA48125276F7A56008C968C /* HomeViewRow.swift in Sources */,
+				6B560E3D2770FF4900AABEB6 /* ContentView.swift in Sources */,
+				6B560E412771120900AABEB6 /* ContentDetailView.swift in Sources */,
 				6B483CDF276D4DED00059C4F /* LearnSwiftApp.swift in Sources */,
+				6B560E3F27710F5A00AABEB6 /* ContentViewRow.swift in Sources */,
 				6B483CF4276D4FD400059C4F /* ContentModel.swift in Sources */,
 				6BA48123276F5D91008C968C /* Models.swift in Sources */,
 			);
