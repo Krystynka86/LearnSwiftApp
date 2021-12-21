@@ -16,7 +16,16 @@ class ContentModel: ObservableObject {
     @Published var currentModule: Module?
     var currentModuleIndex = 0
     
+    // Current lesson
+    @Published var currentLesson: Lesson?
+    var currentLessonIndex = 0
+    
+    // Current lesson explanation
+    @Published var lessonDescription = NSAttributedString()
     var styleData: Data?
+    
+    // Current selected content and test
+    @Published var currentContentselected: Int?
     
     init() {
         
@@ -84,6 +93,74 @@ class ContentModel: ObservableObject {
         // Set the current module
         currentModule = modules[currentModuleIndex]
         
+        
+    }
+    
+    func beginLesson(_ lessonIndex: Int ) {
+        
+        // Check that the lesson index is within range of module lessons
+        if lessonIndex < currentModule!.content.lessons.count {
+           currentLessonIndex = lessonIndex
+        }
+        else {
+            currentLessonIndex = 0
+        }
+        
+        // Set the current lesson
+        currentLesson = currentModule!.content.lessons[currentLessonIndex]
+        lessonDescription = addStyling(_htmlString: currentLesson!.explanation)
+    }
+    
+    func nextLesson() {
+        
+        // Advance the lesson index
+        currentLessonIndex += 1
+        
+        // Check that it is within range
+        if currentLessonIndex < currentModule!.content.lessons.count {
+            
+            // Set the current lesson property
+            currentLesson = currentModule!.content.lessons[currentLessonIndex]
+            lessonDescription = addStyling(_htmlString: currentLesson!.explanation)
+        }
+        else {
+            // Reset the lesson state
+            currentLessonIndex = 0
+            currentLesson = nil 
+        }
+        
+    }
+    
+    func hasNextLesson() -> Bool {
+        /* krotka wersja tego co ponizej:   return (currentLessonIndex + 1 < currentModule!.content.lessons.count)*/
+        if currentLessonIndex + 1 < currentModule!.content.lessons.count {
+            return true
+        }
+        else {
+            return false
+        }
+    }
+    // MARK: - Code Styling
+    private func addStyling(_htmlString: String) -> NSAttributedString {
+        
+        var resultString = NSAttributedString()
+        var data = Data()
+        
+        // Add the styling data
+        if styleData != nil {
+         data.append(self.styleData!)
+        }
+        
+        // Add the html data
+        data.append(Data(_htmlString.utf8))
+        
+        // Convert to attributed string
+            if let attributedString = try? NSAttributedString(data: data, options: [.documentType: NSAttributedString.DocumentType.html], documentAttributes: nil) {
+            
+                resultString = attributedString
+          }
+    
+        return resultString
         
     }
 }

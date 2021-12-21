@@ -31,7 +31,12 @@ struct HomeView: View {
                                         ContentView()
                                                 .onAppear(perform: {
                                     model.beginModule(module.id)
+                                    
                                 }),
+                                    tag: module.id,
+                                    selection: $model.currentContentselected,
+                                    
+                                    
                                 label: {
                                     
                                     // Learning Card
@@ -56,6 +61,7 @@ struct HomeView: View {
             .navigationTitle("Get started")
             
         }
+        .navigationViewStyle(.stack)
     }
 }
 
