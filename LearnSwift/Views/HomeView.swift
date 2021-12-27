@@ -34,22 +34,27 @@ struct HomeView: View {
                                     
                                 }),
                                     tag: module.id,
-                                    selection: $model.currentContentselected,
-                                    
-                                    
-                                label: {
+                                    selection: $model.currentContentselected) {
                                     
                                     // Learning Card
                                     HomeViewRow(image: module.content.image, title: "Learn\(module.category)", description:module.content.description, count: "\(module.content.lessons.count) Lessons", time: module.content.time)
                                     
-                                })
+                                }
+                                    
+                                    NavigationLink(
+                                        destination:
+                                            TestView()
+                                            .onAppear(perform: {
+                                                model.beginTest(_moduleId: module.id)
+                                                
+                                            }),
+                                        tag: module.id,
+                                        selection: $model.currentTestselected) {
+                                            
+                                            // Test Card
+                                            HomeViewRow(image: module.test.image, title: "\(module.category) Test", description:module.test.description, count: "\(module.test.questions.count) Lessons", time: module.test.time)
+                                }
                                 
-                            
-                            
-                            // Test Card
-                            HomeViewRow(image: module.test.image, title: "\(module.category) Test", description:module.test.description, count: "\(module.test.questions.count) Lessons", time: module.test.time)
-                            
-                            
                             }
                         }
                     }
